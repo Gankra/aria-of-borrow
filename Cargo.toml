@@ -1,0 +1,22 @@
+[package]
+name = "aria-of-borrow"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "It's a library AND a binary, but at what cost?"
+repository = "https://github.com/Gankra/aria-of-borrow"
+
+[[bin]]
+name = "aria-of-borrow"
+
+[features]
+# feature to enable the CLI
+cli = ["clap", "tracing-subscriber"]
+
+[dependencies]
+# library deps
+tracing = "0.1.40"
+
+# cli deps
+clap = { version = "4.5.3", features = ["derive"], optional = true }
+tracing-subscriber = { version = "0.3.18", optional = true }
