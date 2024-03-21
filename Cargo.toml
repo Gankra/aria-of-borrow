@@ -1,6 +1,6 @@
 [package]
 name = "aria-of-borrow"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 description = "It's a library AND a binary, but at what cost?"
@@ -12,7 +12,9 @@ required-features = ["cli"]
 
 [features]
 # feature to enable the CLI
+default = ["cli"]
 cli = ["clap", "tracing-subscriber"]
+
 
 [dependencies]
 # library deps
